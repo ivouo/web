@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Jack the Cat Boxer</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    #content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background-image: url("titlebg.png");
+    }
+
+    #title {
+      margin-bottom: 20px;
+      width: 50vw;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    #background-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 100vh;
+    }
+
+    #background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4000vw;
+      height: 100%;
+      z-index: 1;
+      background-image: url("cat.jpg");
+      background-size: 300px;
+      background-repeat: repeat;
+      animation: slideBackground 150s linear infinite;
+      /* 调整动画持续时间和速度 */
+    }
+
+    @keyframes slideBackground {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    #content {
+      z-index: 9999;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="background-container">
+    <div id="background-image"></div>
+    <div id="content">
+      <img id="title" src="title.png" alt="Title">
+
+      <div>
+        <a href="https://twitter.com/cubi_cat_sol"> <img class="btn" src="x.png" alt="Button 1"></a>
+        <a href="https://t.me/cubi_cat"><img class="btn" src="telegram.png" alt="Button 2"></a>
+        <a href="https://pump.fun/profile/cubi_dev"><img class="btn" src="pumpfun.png" alt="Button 3"></a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
